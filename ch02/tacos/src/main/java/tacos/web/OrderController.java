@@ -45,7 +45,7 @@ public class OrderController {
       return "orderForm";
     }
     
-    log.info("Order submitted: " + order);
+    log.info("Zamówienie zostało złożone: " + order);
     return "redirect:/";
   }
 //end::handlePostWithValidation[]

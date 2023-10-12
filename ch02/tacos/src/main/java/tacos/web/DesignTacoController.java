@@ -30,16 +30,17 @@ public class DesignTacoController {
 @ModelAttribute
 public void addIngredientsToModel(Model model) {
 	List<Ingredient> ingredients = Arrays.asList(
-	  new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
-	  new Ingredient("COTO", "Corn Tortilla", Type.WRAP),
-	  new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
-	  new Ingredient("CARN", "Carnitas", Type.PROTEIN),
-	  new Ingredient("TMTO", "Diced Tomatoes", Type.VEGGIES),
-	  new Ingredient("LETC", "Lettuce", Type.VEGGIES),
+	  new Ingredient("FLTO", "Pszenna", Type.WRAP),
+	  new Ingredient("COTO", "Kukurydziana", Type.WRAP),
+    new Ingredient("POTO", "Ziarnista", Type.WRAP),
+	  new Ingredient("GRBF", "Mielona wołowina", Type.PROTEIN),
+	  new Ingredient("CARN", "Kawałki mięsa", Type.PROTEIN),
+	  new Ingredient("TMTO", "Pomidory pokrojone w kostkę", Type.VEGGIES),
+	  new Ingredient("LETC", "Sałata", Type.VEGGIES),
 	  new Ingredient("CHED", "Cheddar", Type.CHEESE),
 	  new Ingredient("JACK", "Monterrey Jack", Type.CHEESE),
-	  new Ingredient("SLSA", "Salsa", Type.SAUCE),
-	  new Ingredient("SRCR", "Sour Cream", Type.SAUCE)
+	  new Ingredient("SLSA", "Pikantny sos pomidorowy", Type.SAUCE),
+	  new Ingredient("SRCR", "Śmietana", Type.SAUCE)
 	);
 	
 	Type[] types = Ingredient.Type.values();
@@ -74,13 +75,13 @@ public void addIngredientsToModel(Model model) {
 
 //tag::processDesignValidated[]
   @PostMapping
-  public String processDesign(@Valid @ModelAttribute("design") Taco design, Errors errors, Model model) {
+  public String processDesign(@Valid @ModelAttribute Taco design, Errors errors, Model model) {
     if (errors.hasErrors()) {
       return "design";
     }
 
-    // Save the taco design...
-    // We'll do this in chapter 3
+    // Zapisanie projektu przygotowanego Taco
+    // Tym zajmiemy sie w rozdziale 3
     log.info("Processing design: " + design);
 
     return "redirect:/orders/current";

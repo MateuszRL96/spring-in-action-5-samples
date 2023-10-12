@@ -13,27 +13,27 @@ import lombok.Data;
 public class Order {
 
   //end::allButValidation[]
-  @NotBlank(message="Name is required")
+  @NotBlank(message="Imie i Nazwisko jest wymagane")
   //tag::allButValidation[]
   private String name;
   //end::allButValidation[]
 
-  @NotBlank(message="Street is required")
+  @NotBlank(message="Adres is required")
   //tag::allButValidation[]
   private String street;
   //end::allButValidation[]
 
-  @NotBlank(message="City is required")
+  @NotBlank(message="Miasto is required")
   //tag::allButValidation[]
   private String city;
   //end::allButValidation[]
 
-  @NotBlank(message="State is required")
+  @NotBlank(message="Kraj is required")
   //tag::allButValidation[]
   private String state;
   //end::allButValidation[]
 
-  @NotBlank(message="Zip code is required")
+  @NotBlank(message="Numer Domu is required")
   //tag::allButValidation[]
   private String zip;
   //end::allButValidation[]

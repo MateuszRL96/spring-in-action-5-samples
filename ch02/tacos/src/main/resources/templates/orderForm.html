@@ -10,10 +10,10 @@
   <body>
 
     <form method="POST" th:action="@{/orders}" th:object="${order}">
-      <h1>Order your taco creations!</h1>
+      <h1>Dokończ zamowienie!</h1>
 
       <img th:src="@{/images/TacoCloud.png}"/>
-      <a th:href="@{/design}" id="another">Design another taco</a><br/>
+      <a th:href="@{/design}" id="another">Stworz nowe zamowienie</a><br/>
 
       <div th:if="${#fields.hasErrors()}">
         <span class="validationError">
@@ -21,8 +21,8 @@
         </span>
       </div>
 
-      <h3>Deliver my taco masterpieces to...</h3>
-      <label for="name">Name: </label>
+      <h3>Przywież moje zamowienie do: </h3>
+      <label for="name">Imie: </label>
       <input type="text" th:field="*{name}"/>
 <!-- end::allButValidation[] -->
       <span class="validationError"
@@ -31,7 +31,7 @@
 <!-- tag::allButValidation[] -->
       <br/>
 
-      <label for="street">Street address: </label>
+      <label for="street">Adres: </label>
       <input type="text" th:field="*{street}"/>
 <!-- end::allButValidation[] -->
       <span class="validationError"
@@ -40,7 +40,7 @@
 <!-- tag::allButValidation[] -->
       <br/>
 
-      <label for="city">City: </label>
+      <label for="city">Miasto: </label>
       <input type="text" th:field="*{city}"/>
 <!-- end::allButValidation[] -->
       <span class="validationError"
@@ -49,7 +49,7 @@
 <!-- tag::allButValidation[] -->
       <br/>
 
-      <label for="state">State: </label>
+      <label for="state">Kraj: </label>
       <input type="text" th:field="*{state}"/>
 <!-- end::allButValidation[] -->
       <span class="validationError"
@@ -58,7 +58,7 @@
 <!-- tag::allButValidation[] -->
       <br/>
 
-      <label for="zip">Zip code: </label>
+      <label for="zip">Numer Domu: </label>
       <input type="text" th:field="*{zip}"/>
 <!-- end::allButValidation[] -->
       <span class="validationError"
@@ -67,7 +67,7 @@
 <!-- tag::allButValidation[] -->
       <br/>
 
-      <h3>Here's how I'll pay...</h3>
+      <h3>Zapłać</h3>
 <!-- tag::validatedField[] -->
       <label for="ccNumber">Credit Card #: </label>
       <input type="text" th:field="*{ccNumber}"/>
@@ -97,7 +97,7 @@
 <!-- tag::allButValidation[] -->
       <br/>
 
-      <input type="submit" value="Submit order"/>
+      <input type="submit" value="Złóż zamowienie"/>
     </form>
 
   </body>
