@@ -1,4 +1,3 @@
-// tag::head[]
 package tacos.web;
 
 import java.util.Arrays;
